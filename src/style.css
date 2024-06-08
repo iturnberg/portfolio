@@ -1,0 +1,104 @@
+/* dark-theme.css */
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+  }
+  
+  a {
+    color: #bb86fc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #ff79c6;
+  }
+  
+  .container {
+    padding: 2rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #bb86fc;
+  }
+  
+  .card {
+    background-color: #1e1e1e;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title, .card-text {
+    color: #e0e0e0;
+  }
+  
+  .card-img {
+    border-bottom: 1px solid #333;
+  }
+  
+  .btn-primary {
+    background-color: #bb86fc;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ff79c6;
+  }
+  
+  .footer {
+    background-color: #1e1e1e;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  .footer .icon {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s;
+  }
+  
+  .footer .icon:hover {
+    color: #bb86fc;
+  }
+  
+  .footer .icon-github:hover {
+    color: #ff79c6;
+  }
+  
+  /* Additional styles for layout and responsiveness */
+  .row {
+    margin-bottom: 1rem;
+  }
+  
+  .card-custom {
+    min-height: 400px;
+  }
+  
+  .card-body-custom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-img-custom {
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  .nav-tabs {
+    background-color: #333;
+  }
+  
+  .nav-link {
+    color: #bb86fc;
+  }
+
+  .nav-link:hover {
+    color: #ff79c6;
+  }
+  
+  .nav-link.active {
+    color: #bdbdbd;
+  }

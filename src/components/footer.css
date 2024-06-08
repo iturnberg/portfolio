@@ -1,0 +1,21 @@
+/* footer.css */
+.footer {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  .footer .icon {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s;
+  }
+  
+  .footer .icon:hover {
+    color: #0077b5; /* LinkedIn color */
+  }
+  
+  .footer .icon-github:hover {
+    color: #333; /* GitHub color */
+  }
+  
