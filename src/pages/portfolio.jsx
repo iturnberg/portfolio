@@ -1,19 +1,20 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card, CardContent, CardMedia, Typography, Button, Grid, Container } from '@mui/material';
 import list from '../list';
-import './portfolio.css'; // Import the CSS file
 
 export default function Portfolio() {
   return (
-    <div className="container">
-      <h1 className="text-center my-4">My Portfolio</h1>
-      <div className="row">
+    <Container>
+      <Typography variant="h4" align="center" gutterBottom>
+        My Portfolio
+      </Typography>
+      <Grid container spacing={4}>
         {list.map((project) => (
           <PortfolioCard key={project.name} project={project} />
         ))}
-      </div>
-    </div>
+      </Grid>
+    </Container>
   );
 }
 
@@ -24,22 +25,61 @@ function PortfolioCard({ project }) {
   });
 
   return (
-    <div className={`col-md-6 mb-4 ${inView ? 'fade-in' : 'fade-out'}`} ref={ref}>
-      <div className="card h-100 card-custom">
-        <img src={project.img} alt={project.name} className="card-img img-fluid card-img-custom" />
-        <div className="card-body d-flex flex-column card-body-custom">
-          <h5 className="card-title">{project.name}</h5>
-          <p className="card-text">{project.description}</p>
-          <div className="btn-group mt-auto">
-            <a href={project.repo} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              View Repo
-            </a>
-            <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              Live Demo
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Grid item xs={12} md={6} ref={ref} className={inView ? 'fade-in' : 'fade-out'}>
+      <Card className="card-custom" sx={{ height: '100%', display: 'flex', flexDirection: 'column', border: '1px solid #6a1b9a', backgroundColor: '#140026', transition: 'transform 0.3s', '&:hover':{transform: 'scale(1.05)',}}}>
+        <CardMedia
+          component="img"
+          image={project.img}
+          alt={project.name}
+          className="card-img-custom"
+        />
+        <CardContent className="card-body-custom" sx={{ flexGrow: 1, color: '#902ded' }}>
+          <Typography variant="h5" component="div">
+            {project.name}
+          </Typography>
+          <Typography variant="body2" color="#8b41d1">
+            {project.description}
+          </Typography>
+          <Grid container spacing={2} sx={{ mt: 2 }}>
+            <Grid item xs={6}>
+              <Button
+                href={project.repo}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="contained"
+                sx={{
+                  backgroundColor:'#5638a8',
+                  color:'#000000',
+                  '&:hover':{
+                    backgroundColor:'#613fbf',
+                  }
+                }}
+                fullWidth
+              >
+                View Repo
+              </Button>
+            </Grid>
+            <Grid item xs={6}>
+              <Button
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="contained"
+                sx={{
+                  backgroundColor:'#5638a8',
+                  color:'#000000',
+                  '&:hover':{
+                    backgroundColor:'#613fbf',
+                  }
+                }}
+                fullWidth
+              >
+                Live Demo
+              </Button>
+            </Grid>
+          </Grid>
+        </CardContent>
+      </Card>
+    </Grid>
   );
 }

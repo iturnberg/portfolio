@@ -48,7 +48,7 @@ const Resume = () => {
                         <h1>Ian Turnberg</h1>
                         <p>Saint Petersburg, FL | 860-849-0825 | ian.r.turnberg@gmail.com</p>
                         <h2>FullStack Developer</h2>
-                        <p>Experienced with React, JavaScript, NodeJS, MongoDB, ExpressJS, SQL, NoSQL, HTML, CSS, Bootstrap</p>
+                        <p>React, JavaScript, NodeJS, MongoDB, ExpressJS, SQL, NoSQL, HTML, CSS, Bootstrap, Material-UI</p>
                         <h2>Tech Sourcer</h2>
                         <p>Experienced with LinkedIn and Boolean search, along with use of sites and tools including Seekout, GitHub, Indeed and Stack Overflow. Familiar with a variety of ATS: Taleo, Oracle, Bullhorn and Loxo. I’ve also leveraged tools such as tampermonkey scripts and built excel sheets/scripts to scrape, manage and store data.</p>
                     </div>
