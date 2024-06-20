@@ -6,8 +6,8 @@ const jobs = [
         duration: "Nov, 2023 - Present",
         responsibilities: [
             "Part of the original staff from the restaurant’s opening, it is my job to ensure guests receive the highest level of service.",
-            "My day to day involves greeting tables, filling guests’ water glasses, setting/resetting/bussing tables, polishing silverware, running dishes to dish, running food to guests, and maintaining a high level of cleanliness in and around the restaurant.",
-            "Fortu usually seats 200 to 400 guests during the 5 hours a night they are open, meaning we must move quickly and efficiently to complete all our tasks and ensure the guest experience is up to Fortu’s high standard."
+            "My day to day involves greeting tables, filling guests’ water glasses, setting/resetting/bussing tables, polishing silverware, running food to guests, and maintaining a high level of cleanliness in and around the restaurant.",
+            "The location usually seats 200 to 400 guests during the 5 hours a night they are open, meaning we must move quickly and efficiently to complete all our tasks and ensure the guest experience is up to Fortu’s high standard."
         ]
     },
     {

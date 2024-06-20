@@ -1,40 +1,49 @@
 import React from 'react';
-import { Card, CardBody, CardTitle, CardText, Container, Row, Col } from 'reactstrap';
-import jobs from '../jobs'
+import { Container, Grid, Card, CardContent, Typography, List, ListItem, ListItemText } from '@mui/material';
+import jobs from '../jobs';
 
 const education = [
     {
         institution: "UCF Fullstack Bootcamp",
-        year: "2024",
-    },
-    {
-        institution: "The Sourcing Institute",
-        year: "2012",
+        duration: "March, 2024 - June, 2024",
     },
     {
         institution: "Saint Petersburg College",
         location: "Saint Petersburg, FL",
         duration: "2017-2019",
-    }
+    },
+    {
+        institution: "The Sourcing Institute",
+        duration: "2012",
+    },
 ];
 
 const EducationCard = () => {
     return (
-        <Card className="mb-4">
-            <CardBody>
-                <CardTitle tag="h5">Education</CardTitle>
-                <CardText>
-                    <ul>
-                        {education.map((edu, index) => (
-                            <li key={index}>
-                                <strong>{edu.institution}</strong> {edu.year ? ` - ${edu.year}` : ""}
-                                {edu.location ? <span><br />{edu.location}</span> : ""}
-                                {edu.duration ? <span><br />{edu.duration}</span> : ""}
-                            </li>
-                        ))}
-                    </ul>
-                </CardText>
-            </CardBody>
+        <Card sx={{ mb: 4, border: '1px solid #6a1b9a', backgroundColor: '#140026' }}>
+            <CardContent>
+                <Typography variant="h5">Education</Typography>
+                <List sx={{ color: '#BB86F5' }}>
+                    {education.map((edu, index) => (
+                        <ListItem key={index} disableGutters>
+                            <ListItemText
+                                primary={
+                                    <Typography variant="h5" component="span">
+                                        {edu.institution}
+                                    </Typography>
+                                }
+                                secondary={
+                                    <Typography component="span" sx={{ color: '#902ded' }}>
+                                        {edu.year && ` - ${edu.year}`}
+                                        {edu.location && <><br />{edu.location}</>}
+                                        {edu.duration && <><br />{edu.duration}</>}
+                                    </Typography>
+                                }
+                            />
+                        </ListItem>
+                    ))}
+                </List>
+            </CardContent>
         </Card>
     );
 };
@@ -42,35 +51,35 @@ const EducationCard = () => {
 const Resume = () => {
     return (
         <Container>
-            <Row>
-                <Col md={{ size: 8, offset: 2 }}>
-                    <div className="text-center my-4">
-                        <h1>Ian Turnberg</h1>
-                        <p>Saint Petersburg, FL | 860-849-0825 | ian.r.turnberg@gmail.com</p>
-                        <h2>FullStack Developer</h2>
-                        <p>React, JavaScript, NodeJS, MongoDB, ExpressJS, SQL, NoSQL, HTML, CSS, Bootstrap, Material-UI</p>
-                        <h2>Tech Sourcer</h2>
-                        <p>Experienced with LinkedIn and Boolean search, along with use of sites and tools including Seekout, GitHub, Indeed and Stack Overflow. Familiar with a variety of ATS: Taleo, Oracle, Bullhorn and Loxo. I’ve also leveraged tools such as tampermonkey scripts and built excel sheets/scripts to scrape, manage and store data.</p>
+            <Grid container justifyContent="center">
+                <Grid item md={8}>
+                    <div style={{ textAlign: 'center', margin: '16px 0' }}>
+                        <Typography variant="h3">Ian Turnberg</Typography>
+                        <Typography variant="body1" sx={{ mb: 2 }}>Saint Petersburg, FL | 860-849-0825 | ian.r.turnberg@gmail.com</Typography>
+                        <Typography variant="h5">FullStack Developer</Typography>
+                        <Typography variant="body1" sx={{ mb: 2 }}>React, JavaScript, NodeJS, MongoDB, ExpressJS, SQL, NoSQL, HTML, CSS, Bootstrap, Material-UI</Typography>
+                        <Typography variant="h5">Tech Sourcer</Typography>
+                        <Typography variant="body1">Experienced with LinkedIn and Boolean search, along with use of sites and tools including Seekout, GitHub, Indeed and Stack Overflow. Familiar with a variety of ATS: Taleo, Oracle, Bullhorn and Loxo. I’ve also leveraged tools such as tampermonkey scripts and built excel sheets/scripts to scrape, manage and store data.</Typography>
                     </div>
                     {jobs.map((job, index) => (
-                        <Card key={index} className="mb-4">
-                            <CardBody>
-                                <CardTitle tag="h5">{job.title}</CardTitle>
-                                <h6>{job.company} - {job.location}</h6>
-                                <h6>{job.duration}</h6>
-                                <CardText>
-                                    <ul>
-                                        {job.responsibilities.map((resp, i) => (
-                                            <li key={i}>{resp}</li>
-                                        ))}
-                                    </ul>
-                                </CardText>
-                            </CardBody>
+                        <Card key={index} sx={{ mb: 4, border: '1px solid #6a1b9a', backgroundColor: '#140026' }}>
+                            <CardContent>
+                                <Typography variant="h5">{job.title}</Typography>
+                                <Typography variant="subtitle1">{job.company} - {job.location}</Typography>
+                                <Typography variant="subtitle2">{job.duration}</Typography>
+                                <List sx={{ color: '#902ded' }}>
+                                    {job.responsibilities.map((resp, i) => (
+                                        <ListItem key={i} disableGutters>
+                                            <ListItemText primary={resp} />
+                                        </ListItem>
+                                    ))}
+                                </List>
+                            </CardContent>
                         </Card>
                     ))}
                     <EducationCard />
-                </Col>
-            </Row>
+                </Grid>
+            </Grid>
         </Container>
     );
 };

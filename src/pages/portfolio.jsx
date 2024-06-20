@@ -25,7 +25,7 @@ function PortfolioCard({ project }) {
   });
 
   return (
-    <Grid item xs={12} md={6} ref={ref} className={inView ? 'fade-in' : 'fade-out'}>
+    <Grid item xs={12} md={6} ref={ref} className={inView ? 'fade-in' : 'fade-out'} sx={{mb:5}}>
       <Card className="card-custom" sx={{ height: '100%', display: 'flex', flexDirection: 'column', border: '1px solid #6a1b9a', backgroundColor: '#140026', transition: 'transform 0.3s', '&:hover':{transform: 'scale(1.05)',}}}>
         <CardMedia
           component="img"
