@@ -1,16 +1,30 @@
-// Bringing in the required import from 'react-router-dom'
-import { Outlet } from 'react-router-dom';
+import React from 'react';
+import { Element } from 'react-scroll';
 import Header from './components/header';
 import Footer from './components/footer';
 import './style.css';
+import About from './pages/about';
+import Contact from './pages/contact';
+import Portfolio from './pages/portfolio';
+import ResumeSection from './pages/ResumeDisplay';
 
 function App() {
-  // The Outlet component will conditionally swap between the different pages according to the URL
   return (
     <>
       <Header />
       <main className="mx-3">
-        <Outlet />
+        <Element name="about" id="about">
+          <section><About /></section>
+        </Element>
+        <Element name="portfolio" id="portfolio">
+        <section><Portfolio /></section>
+        </Element>
+        <Element name="resume" id="resume">
+        <section><ResumeSection /></section>
+        </Element>
+        <Element name="contact" id="contact">
+        <section><Contact /></section>
+        </Element>
       </main>
       <Footer />
     </>
