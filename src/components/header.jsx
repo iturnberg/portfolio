@@ -111,6 +111,7 @@ function Header() {
                         className="scroll-link"
                     >
                         Contact
+
                     </Typography>
                 </Toolbar>
             </GradientAppBar>

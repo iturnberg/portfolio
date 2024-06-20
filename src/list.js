@@ -17,7 +17,7 @@ const list = [
     {
       name: 'The Final Frontier',
       img: '/src/assets/finalfrontier.png',
-      description: 'Project I workedon with a team of 3 of my classmates, we were tasked with making a site with an interactive front-end that uses at least 2 API calls using fecth requests',
+description: 'Website to view images from various NASA API`s. Built using HTML, JS, Jquery and CSS.',
       repo: 'https://github.com/RyanH118/The_Final_Frontier',
       link: 'https://ryanh118.github.io/The_Final_Frontier/',
     },
