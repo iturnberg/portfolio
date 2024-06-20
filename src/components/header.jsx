@@ -38,10 +38,7 @@ function Header() {
             <GradientAppBar position="static" color="primary">
                 <Toolbar>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        Ian Turnberg
-                    </Typography>
-                    <Typography variant="subtitle1" component="div" sx={{ flexGrow: 1 }}>
-                        Fullstack Developer
+                        Ian Turnberg, Fullstack Developer
                     </Typography>
                     <Tabs value={currentPage} textColor="inherit" indicatorColor="secondary">
                         <Tab label="Home" value="/" component={Link} to="/" />
