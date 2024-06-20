@@ -17,7 +17,7 @@ const list = [
     {
       name: 'The Final Frontier',
       img: '/src/assets/finalfrontier.png',
-      description: 'Website to view images from various NASA API`s. Built using HTML, JS, Jquery and CSS.',
+description: 'Website to view images from various NASA API`s. Built using HTML, JS, Jquery and CSS.',
       repo: 'https://github.com/RyanH118/The_Final_Frontier',
       link: 'https://ryanh118.github.io/The_Final_Frontier/',
     },

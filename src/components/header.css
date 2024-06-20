@@ -1,0 +1,5 @@
+.active {
+    color: #6a1b9a !important; /* Ensure the color is applied */
+    font-weight: bold !important; /* Ensure the font-weight is applied */
+    border-bottom: 2px solid #6a1b9a !important; /* Ensure the border-bottom is applied */
+}
