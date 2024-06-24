@@ -9,7 +9,7 @@ export default function Portfolio() {
     id="portfolio" sx={{ 
       padding: 2,
       border: '5px solid',
-      borderImage: 'linear-gradient(to top right, rgba(106, 27, 154, 1) 0%, rgba(106, 27, 154, 0) 50%, rgba(106, 27, 154, 0) 100%) 1',
+      borderImage: 'linear-gradient(to bottom left, rgba(106, 27, 154, 1) 0%, rgba(106, 27, 154, 0) 50%, rgba(106, 27, 154, 0) 100%) 1',
       marginBottom: 5}}>
       <Typography variant="h4" align="center" gutterBottom>
         My Portfolio

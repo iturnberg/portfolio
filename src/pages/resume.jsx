@@ -50,7 +50,10 @@ const EducationCard = () => {
 
 const Resume = () => {
     return (
-        <Container>
+        <Container sx={{
+            padding: 2,
+            border: '5px solid',
+            borderImage: 'linear-gradient(to top right, rgba(106, 27, 154, 1) 0%, rgba(106, 27, 154, 0) 50%, rgba(106, 27, 154, 0) 100%) 1',}}>
             <Grid container justifyContent="center">
                 <Grid item md={8}>
                     <div style={{ textAlign: 'center', margin: '16px 0' }}>

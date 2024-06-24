@@ -36,8 +36,6 @@ const ResumeSection = () => {
               <Button variant="contained" color="secondary" onClick={handleToggleResume}>
                 {showResume ? 'Hide Resume' : 'Show Resume'}
               </Button>
-            </Grid>
-            <Grid item>
               <Button variant="contained" color="secondary" onClick={handleDownloadResume}>
                 Download Resume
               </Button>

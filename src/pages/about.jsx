@@ -6,16 +6,18 @@ import vivian1 from '../assets/vivian1.jpg';
 export default function About() {
   return (
     <Container
-    id="about"
+      id="about"
       sx={{
         padding: 2,
         border: '5px solid',
-        borderImage: 'linear-gradient(to top left, rgba(106, 27, 154, 1) 0%, rgba(106, 27, 154, 0) 50%, rgba(106, 27, 154, 0) 100%) 1',
-        marginBottom: 5,
+        borderImage: 'linear-gradient(to bottom right, rgba(106, 27, 154, 1) 0%, rgba(106, 27, 154, 0) 50%, rgba(106, 27, 154, 0) 100%) 1',
+        height: '100%', // Ensure it takes up the full height of its parent
+        boxSizing: 'border-box', // Include padding and border in the element's total width and height
+        overflow: 'auto', // Handle overflow content
       }}
     >
-      <Grid container justifyContent="center">
-        <Grid item xs={12} md={8}>
+      <Grid container justifyContent="center" style={{ height: '100%' }}>
+        <Grid item xs={12} md={8} style={{ height: '100%' }}>
           <Box
             sx={{
               display: 'flex',
@@ -24,7 +26,8 @@ export default function About() {
               justifyContent: 'center',
               textAlign: 'center',
               padding: 2,
-              minHeight: '85vh',
+              height: '100%', // Ensure it takes up the full height of its parent
+              overflow: 'auto', // Handle overflow content
             }}
           >
             <Typography variant="h4" gutterBottom>
@@ -36,16 +39,16 @@ export default function About() {
             <Typography variant="body1" paragraph>
               In my free time I enjoy playing video games, spending time with my cats, and working on projects.
             </Typography>
-            <Grid container spacing={2} justifyContent="center">
+            {/* <Grid container spacing={2} justifyContent="center">
               <Grid item xs={12} md={6} textAlign="center">
-                <Box component="img" src={maggie1} sx={{ maxWidth: 250, maxHeight: 250 }} />
+                <Box component="img" src={maggie1} sx={{ maxWidth: '100%', maxHeight: 250 }} />
                 <Typography>Maggie!</Typography>
               </Grid>
               <Grid item xs={12} md={6} textAlign="center">
-                <Box component="img" src={vivian1} sx={{ maxWidth: 250, maxHeight: 250 }} />
+                <Box component="img" src={vivian1} sx={{ maxWidth: '100%', maxHeight: 250 }} />
                 <Typography>Vivian!</Typography>
               </Grid>
-            </Grid>
+            </Grid> */}
           </Box>
         </Grid>
       </Grid>

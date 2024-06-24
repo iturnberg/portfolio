@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Card, CardMedia } from '@mui/material';
+import { Box, Card, CardMedia, Tooltip } from '@mui/material';
 
 const images = [
   "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
@@ -16,34 +16,52 @@ const images = [
   "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
 ];
 
+// Function to extract skill name from the URL
+const getSkillName = (url) => {
+  const parts = url.split('/');
+  const fileName = parts[parts.length - 1];
+  return fileName.split('-')[0]; // Extract skill name before '-original.svg'
+};
+
 const CardBelt = () => {
   return (
-    <Box sx={{ display: 'flex', overflowX: 'auto', padding: '10px', whiteSpace: 'nowrap', alignItems: 'center', justifyContent: 'center', }}>
+    <Box
+      sx={{
+        display: 'flex',
+        overflowX: 'auto',
+        padding: '10px',
+        whiteSpace: 'nowrap',
+        alignItems: 'center',
+        justifyContent: 'center',
+        boxSizing: 'border-box', // Include padding and border in the element's total width and height
+      }}
+    >
       {images.map((src, index) => (
-        <Card
-          key={index}
-          sx={{
-            flex: '0 0 auto',
-            margin: '0 10px',
-            padding: '10px',
-            border: '1px solid #ccc',
-            borderRadius: '8px',
-            backgroundColor: '#fff',
-            boxShadow: '0 4px 8px rgba(106, 27, 154, 0.5)',
-            width: '50px',
-            height: '50px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
-        >
-          <CardMedia
-            component="img"
-            image={src}
-            alt={`icon-${index}`}
-            sx={{ maxWidth: '100%', maxHeight: '100%' }}
-          />
-        </Card>
+        <Tooltip key={index} title={getSkillName(src)} arrow>
+          <Card
+            sx={{
+              flex: '0 0 auto',
+              margin: '0 10px',
+              padding: '10px',
+              border: '1px solid #ccc',
+              borderRadius: '8px',
+              backgroundColor: '#fff',
+              boxShadow: '0 4px 8px rgba(106, 27, 154, 0.5)',
+              width: '50px',
+              height: '50px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <CardMedia
+              component="img"
+              image={src}
+              alt={`icon-${index}`}
+              sx={{ maxWidth: '100%' }}
+            />
+          </Card>
+        </Tooltip>
       ))}
     </Box>
   );
