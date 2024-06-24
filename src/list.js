@@ -15,7 +15,7 @@ const list = [
   {
     name:'Pantry.js',
     img: pantryImage,
-    description:'A pantry tracker/cookbook application built using React and GraphQL',
+    description:'A pantry tracker/cookbook application built using React and GraphQL. Live demo takes some time to load.',
     repo:'https://github.com/LemonTag/Pantry.js',
     link:'https://pantry-js.onrender.com/',
   },
