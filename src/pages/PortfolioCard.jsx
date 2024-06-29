@@ -41,6 +41,10 @@ function PortfolioCard({ project }) {
           image={project.img}
           alt={project.name}
           className="card-img-custom"
+          sx={{
+            height: 200, // Set a fixed height for the image
+            objectFit: 'cover', // Ensure the image covers the area without distortion
+          }}
         />
         <CardContent className="card-body-custom" sx={{ flexGrow: 1, color: '#902ded' }}>
           <Typography variant="h5" component="div">
