@@ -1,0 +1,16 @@
+/* grid.css */
+.overflow-scroll {
+  overflow: auto;
+}
+
+@media (max-width: 900px) {
+  .full-screen-grid {
+    overflow: auto !important;
+  }
+  .left-pane {
+    overflow: auto !important;
+  }
+  .right-pane {
+    overflow: auto !important;
+  }
+}

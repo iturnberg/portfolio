@@ -67,7 +67,7 @@ const FlipSwitch = () => {
           <Portfolio />
         </Collapse>
         <Collapse in={!showPortfolio}>
-          <CustomScrollbarBox sx={{ overflow: 'auto', maxHeight: '80vh' }}>
+          <CustomScrollbarBox sx={{ overflow: 'auto', maxHeight: '90vh' }}>
             <Box sx={{ textAlign: 'center', marginTop: 2 }}>
               <Button variant="contained" color="secondary" onClick={handleDownloadResume}>
                 Download Resume

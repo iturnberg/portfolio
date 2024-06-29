@@ -57,3 +57,14 @@
       transform: rotate(360deg);
   }
 }
+
+/* button.css or a new CSS file */
+@media (max-width: 600px) {
+  .full-screen-grid {
+    overflow: auto;
+  }
+}
+
+.overflow-scroll {
+  overflow: auto;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Box, Button, Collapse } from '@mui/material';
+import { Grid, Box, Button, Collapse, useMediaQuery } from '@mui/material';
 import About from './about';
 import Contact from './contact';
 import CardBelt from '../components/skills';
@@ -7,47 +7,43 @@ import FlipSwitch from '../components/switch';
 import ProjectDetails from '../components/projectDetails';
 import { useDisplay } from '../components/displayContext';
 import '../components/button.css';
-
+import './grid.css';
 
 const FullScreenGrid = () => {
   const { display, project, showDefault } = useDisplay();
   const blackBackgroundStyle = { backgroundColor: 'black' };
+  const isSmallScreen = useMediaQuery('(max-width: 900px)');
 
   return (
-    <Grid container style={{ height: '100vh', maxHeight: '100vh', overflow: 'hidden' }}>
-      <Grid item xs={6} style={{ backgroundColor: 'black', display: 'flex', flexDirection: 'column', height: '100%' }}>
+    <Grid container className="full-screen-grid" style={{ height: '100vh', overflow: isSmallScreen ? 'auto' : 'hidden' }}>
+      <Grid item xs={12} md={6} className="left-pane" style={{ ...blackBackgroundStyle, display: 'flex', flexDirection: 'column', height: '100%', overflow: isSmallScreen ? 'auto' : 'hidden' }}>
         <Collapse in={display === 'default'} orientation="horizontal" style={{ flex: 1 }}>
-          <Grid container direction="column" style={{ flex: 1 }}>
-            <Grid item style={{ height: '30%', ...blackBackgroundStyle, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-              <Box display="flex" justifyContent="center" alignItems="center" flex={1}>
+          <Grid container direction="column" style={{ flex: 1, height: '100%' }}>
+            <Grid item xs={12} style={{ flex: '1 1 30%', ...blackBackgroundStyle, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+              <Box display="flex" justifyContent="center" alignItems="center" flex={1} sx={{ padding: isSmallScreen ? '10px' : '20px' }}>
                 <About />
               </Box>
             </Grid>
-            <Grid item style={{ height: '15%', ...blackBackgroundStyle, display: 'flex', flexDirection: 'column', overflow: 'auto', paddingBottom: '5%', }}>
-              <Box display="flex" justifyContent="center" alignItems="center" flex={1}>
+            <Grid item xs={12} style={{ flex: '1 1 15%', ...blackBackgroundStyle, display: 'flex', flexDirection: 'column', overflow: 'hidden', paddingBottom: '5%' }}>
+              <Box display="flex" justifyContent="center" alignItems="center" flex={1} sx={{ padding: isSmallScreen ? '10px' : '20px' }}>
                 <CardBelt />
               </Box>
             </Grid>
-            <Grid item style={{ height: '50%', ...blackBackgroundStyle, display: 'flex', flexDirection: 'column' }}>
-              <Box display="flex" justifyContent="center" alignItems="center" flex={1}>
+            <Grid item xs={12} style={{ flex: '1 1 55%', ...blackBackgroundStyle, display: 'flex', flexDirection: 'column', overflow: 'hidden', paddingTop: '0%' }}>
+              <Box display="flex" justifyContent="center" alignItems="center" flex={1} sx={{padding: isSmallScreen ? '0px' : '0px' }}>
                 <Contact />
               </Box>
             </Grid>
           </Grid>
         </Collapse>
         <Collapse in={display === 'projectDetails'} orientation="horizontal" style={{ flex: 1, height: '100vh' }}>
-          <Box display="flex" justifyContent="center" alignItems="center" flex={1} style={{ padding: '20px', position: 'relative', }}>
+          <Box display="flex" justifyContent="center" alignItems="center" flex={1} style={{ padding: '20px', position: 'relative' }}>
             <ProjectDetails project={project} />
-            <Button
-              onClick={showDefault}
-              className="button"
-            >
-              Close
-            </Button>
+            <Button onClick={showDefault} className="button">Close</Button>
           </Box>
         </Collapse>
       </Grid>
-      <Grid item xs={6} style={{ ...blackBackgroundStyle, display: 'flex', flexDirection: 'column', overflow: 'auto' }}>
+      <Grid item xs={12} md={6} className="right-pane" style={{ ...blackBackgroundStyle, display: 'flex', flexDirection: 'column', overflow: isSmallScreen ? 'auto' : 'hidden' }}>
         <Box display="flex" justifyContent="center" alignItems="center" flex={1}>
           <FlipSwitch />
         </Box>

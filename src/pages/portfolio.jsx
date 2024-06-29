@@ -9,16 +9,16 @@ export default function Portfolio() {
       id="portfolio"
       sx={{
         padding: 2,
+        paddingBottom: 5, // Add padding at the bottom
         border: '5px solid',
-        borderImage:
-          'linear-gradient(to bottom left, rgba(106, 27, 154, 1) 0%, rgba(106, 27, 154, 0) 50%, rgba(106, 27, 154, 0) 100%) 1',
+        borderImage: 'linear-gradient(to bottom left, rgba(106, 27, 154, 1) 0%, rgba(106, 27, 154, 0) 50%, rgba(106, 27, 154, 0) 100%) 1',
         marginBottom: 5,
       }}
     >
       <Typography variant="h4" align="center" gutterBottom>
         My Portfolio
       </Typography>
-      <Grid container spacing={4}>
+      <Grid container spacing={2}> {/* Adjust spacing to a smaller value */}
         {list.map((project) => (
           <PortfolioCard key={project.name} project={project} />
         ))}
