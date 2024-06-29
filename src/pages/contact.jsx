@@ -10,8 +10,8 @@ export default function Contact() {
         padding: 2,
         border: '5px solid',
         borderImage: 'linear-gradient(to bottom right, rgba(106, 27, 154, 1) 0%, rgba(106, 27, 154, 0) 50%, rgba(106, 27, 154, 0) 100%) 1',
-        height: '100%', // Ensure it takes up the full height of its parent
-        boxSizing: 'border-box', // Include padding and border in the element's total width and height
+        height: '100%',
+        boxSizing: 'border-box',
       }}
     >
       <Grid container justifyContent="center" style={{ height: '100%' }}>
@@ -24,8 +24,8 @@ export default function Contact() {
               justifyContent: 'center',
               textAlign: 'center',
               padding: 2,
-              height: '100%', // Ensure it takes up the full height of its parent
-              overflow: 'auto', // Handle overflow content
+              height: '100%',
+              overflow: 'auto',
             }}
           >
             <Typography variant="h4" gutterBottom>

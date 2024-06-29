@@ -1,0 +1,59 @@
+.button {
+  position: absolute;
+  right: 15px; /* Adjust this value to control how much the button hangs off the box */
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  color: #c414e7 !important;
+  padding-left: 10px; /* Add padding to the left of the button */
+  background-color: black;
+  border-radius: 8px;
+  transition: background-color 0.3s, border-image 0.3s;
+  overflow: hidden; /* Ensure the pseudo-elements don't overflow the button */
+  z-index: 1; /* Ensure the button text is above the pseudo-elements */
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: -4px; /* Adjust to position the pseudo-element correctly */
+  left: -4px; /* Adjust to position the pseudo-element correctly */
+  right: -4px; /* Adjust to position the pseudo-element correctly */
+  bottom: -4px; /* Adjust to position the pseudo-element correctly */
+  border-radius: inherit; /* Match the border-radius of the button */
+  background: linear-gradient(90deg, rgba(106, 27, 154, 0) 25%, rgba(106, 27, 154, 1) 50%, rgba(106, 27, 154, 0) 75%);
+  background-size: 200% 200%; /* Control the size of the gradient */
+  z-index: -2; /* Ensure the pseudo-element is behind the button content */
+  transition: background 0.3s;
+  animation: rotateGradient 2s linear infinite;
+  animation-play-state: paused; /* Pause the animation by default */
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 4px; /* Adjust to position the pseudo-element correctly */
+  left: 4px; /* Adjust to position the pseudo-element correctly */
+  right: 4px; /* Adjust to position the pseudo-element correctly */
+  bottom: 4px; /* Adjust to position the pseudo-element correctly */
+  border-radius: inherit; /* Match the border-radius of the button */
+  background-color: black; /* Cover the button with black */
+  z-index: -1; /* Ensure the pseudo-element is above the gradient but below the text */
+}
+
+.button:hover::before {
+  animation-play-state: running; /* Run the animation when hovered */
+}
+
+.button:hover {
+  background-color: black;
+}
+
+/* Define the keyframes for the gradient rotation */
+@keyframes rotateGradient {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
