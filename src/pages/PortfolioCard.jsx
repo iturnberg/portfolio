@@ -16,7 +16,14 @@ function PortfolioCard({ project }) {
   };
 
   return (
-    <Grid item xs={12} md={6} ref={ref} className={inView ? 'fade-in' : 'fade-out'} sx={{ mb: 5 }}>
+    <Grid
+      item
+      xs={12}
+      md={6}
+      ref={ref}
+      className={inView ? 'fade-in' : 'fade-out'}
+      sx={{ mb: 2 }} // Adjust margin bottom to reduce gap
+    >
       <Card
         className="card-custom"
         sx={{

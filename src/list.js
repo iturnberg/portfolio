@@ -2,6 +2,10 @@ import pantryImage from './assets/pantrydotjs.png';
 import finalFrontierImage from './assets/finalfrontier.png';
 import blogImage from './assets/blog.png';
 import payrollTrackerImage from './assets/payrolltracker.png';
+import PantryDemo from './assets/pantryjsdemo.gif';
+import PayrollDemo from './assets/payrolltrackerdemo.gif';
+import BlogDemo from './assets/blogdemo.gif';
+import FrontierDemo from './assets/finalfrontierdemo.gif';
 
 // {
 //     name:'',
@@ -22,6 +26,7 @@ Since this is a prototype for a class project, we are currently using Edamam’s
 `,
     repo:'https://github.com/LemonTag/Pantry.js',
     link:'https://pantry-js.onrender.com/',
+    demo: PantryDemo,
   },
   {
     name: 'The Final Frontier',
@@ -30,6 +35,7 @@ Since this is a prototype for a class project, we are currently using Edamam’s
     bigDescription:`This was the first group project we had a month into UCF's 3 month bootcamp. Built using Javascript, HTML, CSS, Materialize and JQuery, the website uses multiple NASA astronomy image APIs and allows users to navigate through them, as well as save favorites to local storage. I built the landing page, which displays NASA’s Astronomy Picture of the Day and allows users to navigate through different pictures using the datepicker at the top of the page. I also built the modal popups for the image library page that display advanced details for the related images.`,
     repo: 'https://github.com/RyanH118/The_Final_Frontier',
     link: 'https://ryanh118.github.io/The_Final_Frontier/',
+    demo: FrontierDemo,
   },
   {
     name: 'Personal Blog',
@@ -38,6 +44,7 @@ Since this is a prototype for a class project, we are currently using Edamam’s
     bigDescription:`Simple `,
     repo: 'https://github.com/iturnberg/personalblog',
     link: 'https://iturnberg.github.io/personalblog',
+    demo: BlogDemo,
   },
   {
     name:'Employee Payroll Tracker',
@@ -46,6 +53,7 @@ Since this is a prototype for a class project, we are currently using Edamam’s
     bigDescription:``,
     repo:'https://github.com/iturnberg/EmployeePayrollTracker',
     link:'https://iturnberg.github.io/EmployeePayrollTracker/',
+    demo: PayrollDemo,
   },
 //     {
 //     name:'Note Taker',

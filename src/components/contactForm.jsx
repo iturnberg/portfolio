@@ -1,23 +1,20 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
-import { Box, Typography, TextField, Button, Alert, Grid } from '@mui/material';
+import { Box, TextField, Button, Alert, Grid } from '@mui/material';
 
 const ContactForm = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const [disabled, setDisabled] = useState(false);
   const [alertInfo, setAlertInfo] = useState({ display: false, message: '', type: '' });
 
-  // Shows alert message for form submission feedback
   const toggleAlert = (message, type) => {
     setAlertInfo({ display: true, message, type });
-    // Hide alert after 5 seconds
     setTimeout(() => {
       setAlertInfo({ display: false, message: '', type: '' });
     }, 5000);
   };
 
-  // Function called on submit that uses emailjs to send email of valid contact form
   const onSubmit = async (data) => {
     const { name, email, subject, message } = data;
     try {

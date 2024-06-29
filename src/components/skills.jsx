@@ -29,7 +29,7 @@ const CardBelt = () => {
       sx={{
         display: 'flex',
         overflowX: 'auto',
-        padding: '10px',
+        padding: '0px',
         whiteSpace: 'nowrap',
         alignItems: 'center',
         justifyContent: 'center',
@@ -42,7 +42,7 @@ const CardBelt = () => {
             sx={{
               flex: '0 0 auto',
               margin: '0 10px',
-              padding: '10px',
+              padding: '5px',
               border: '1px solid #ccc',
               borderRadius: '8px',
               backgroundColor: '#fff',
