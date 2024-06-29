@@ -9,7 +9,7 @@ export default function Contact() {
       sx={{
         padding: 2,
         border: '5px solid',
-        borderImage: 'linear-gradient(to bottom right, rgba(106, 27, 154, 1) 0%, rgba(106, 27, 154, 0) 50%, rgba(106, 27, 154, 0) 100%) 1',
+        borderImage: 'linear-gradient(to top right, rgba(106, 27, 154, 1) 0%, rgba(106, 27, 154, 0) 50%, rgba(106, 27, 154, 0) 100%) 1',
         boxSizing: 'border-box',
         maxWidth: '100%', // Ensure the container does not exceed the viewport width
       }}
