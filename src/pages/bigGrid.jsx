@@ -25,7 +25,7 @@ const FullScreenGrid = () => {
           className={display === 'default' ? 'smooth-collapse-enter' : 'smooth-collapse-exit'}
         >
           <Grid container direction="column" style={{ flex: 1, height: '100%' }}>
-            <Grid item xs={12} style={{ flex: '1 1 25%', ...blackBackgroundStyle, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+            <Grid item xs={12} style={{ flex: '1 1 27%', ...blackBackgroundStyle, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
               <Box display="flex" justifyContent="center" alignItems="center" flex={1} sx={{ padding: isSmallScreen ? '10px' : '20px' }}>
                 <About />
               </Box>
