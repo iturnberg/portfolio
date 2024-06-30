@@ -23,7 +23,7 @@ const CustomScrollbarBox = styled(Box)({
 
 const handleDownloadResume = () => {
   const link = document.createElement('a');
-  link.href = 'https://drive.google.com/uc?export=download&id=0BxI5e0l4YXWDekRDZ2IwVDg1OEdTY3NvUmF5RUhKWkhENDZN';
+  link.href = '/assets/Ian_Turnberg_Resume.docx'; // Directly reference the file in the public folder
   link.download = 'Ian_Turnberg_Resume.docx';
   document.body.appendChild(link);
   link.click();
