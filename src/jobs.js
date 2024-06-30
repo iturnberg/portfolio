@@ -5,9 +5,7 @@ const jobs = [
         location: "Saint Petersburg",
         duration: "Nov, 2023 - Present",
         responsibilities: [
-            "Part of the original staff from the restaurant’s opening, it is my job to ensure guests receive the highest level of service.",
-            "My day to day involves greeting tables, filling guests’ water glasses, setting/resetting/bussing tables, polishing silverware, running food to guests, and maintaining a high level of cleanliness in and around the restaurant.",
-            "The location usually seats 200 to 400 guests during the 5 hours a night they are open, meaning we must move quickly and efficiently to complete all our tasks and ensure the guest experience is up to Fortu’s high standard."
+            "Fortu is a high-end Pan Asian steakhouse that provides an elevated dining experience to its guests. As one of the original members of the restaurant, I helped shaped how the Service Assistant team facilitates Fortu’s high level of service throughout our hours of operation, which will usually see around 300 guests."
         ]
     },
     {
