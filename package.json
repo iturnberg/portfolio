@@ -3,13 +3,13 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "start": "vite",
-        "build": "vite build && react-scripts build && cp -r src/assets",
-        "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-        "preview": "vite preview"
-    },
+"scripts": {
+  "dev": "vite",
+  "start": "vite",
+  "build": "vite build && cp -r src/assets dist/",
+  "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+  "preview": "vite preview"
+},
     "dependencies": {
         "@emailjs/browser": "^3.11.0",
         "@emotion/react": "^11.11.4",
