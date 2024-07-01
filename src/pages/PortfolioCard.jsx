@@ -34,6 +34,14 @@ function PortfolioCard({ project }) {
 
   const handleDetailsClick = () => {
     showProjectDetails(project);
+    
+    // Scroll to the top on mobile
+    if (window.innerWidth <= 768) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
   };
 
   return (
