@@ -2,6 +2,7 @@ import Resume from './resume';
 import CardBelt from '../components/skills';
 import { Button, Grid, Container } from '@mui/material';
 import React, { useState } from 'react';
+import resumeFile from '../assets/Ian_Turnberg_Resume.docx';
 
 const ResumeSection = () => {
   const [showResume, setShowResume] = useState(false);
@@ -10,14 +11,15 @@ const ResumeSection = () => {
     setShowResume(!showResume);
   };
 
+
   const handleDownloadResume = () => {
-    const link = document.createElement('a');
-    link.href = '/assets/Ian_Turnberg_Resume.docx';
-    link.download = 'Ian_Turnberg_Resume.docx';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-};
+      const link = document.createElement('a');
+      link.href = resumeFile;
+      link.download = 'Ian_Turnberg_Resume.docx';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+  };
 
   return (
     <Container
