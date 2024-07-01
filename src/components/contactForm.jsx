@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
-import { Box, TextField, Button, Alert, Grid } from '@mui/material';
+import { Box, TextField, Button, Alert, Grid, CircularProgress } from '@mui/material';
 
 const ContactForm = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -138,9 +138,10 @@ const ContactForm = () => {
                 '&:hover': {
                   backgroundColor: '#bb86fc',
                 },
+                position: 'relative', // Ensure button has a positioning context
               }}
             >
-              Submit
+              {disabled ? <CircularProgress size={24} sx={{ color: 'white' }} /> : 'Submit'}
             </Button>
           </Grid>
         </Grid>
@@ -154,6 +155,7 @@ const ContactForm = () => {
             backgroundColor: alertInfo.type === 'success' ? '#bb86fc' : 'rgba(106, 27, 154, 1)',
             color: 'white',
           }}
+          aria-live="assertive"
         >
           {alertInfo.message}
         </Alert>

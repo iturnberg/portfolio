@@ -4,7 +4,6 @@ import Portfolio from '../pages/portfolio';
 import ResumeSection from '../pages/resume';
 import { styled } from '@mui/system';
 
-// Custom styles for the scrollbar
 const CustomScrollbarBox = styled(Box)({
   '&::-webkit-scrollbar': {
     width: '8px',
@@ -23,7 +22,7 @@ const CustomScrollbarBox = styled(Box)({
 
 const handleDownloadResume = () => {
   const link = document.createElement('a');
-  link.href = '/assets/Ian_Turnberg_Resume.docx'; // Directly reference the file in the public folder
+  link.href = '/assets/Ian_Turnberg_Resume.docx';
   link.download = 'Ian_Turnberg_Resume.docx';
   document.body.appendChild(link);
   link.click();
@@ -67,8 +66,8 @@ const FlipSwitch = () => {
           <Portfolio />
         </Collapse>
         <Collapse in={!showPortfolio}>
-          <CustomScrollbarBox sx={{ overflow: 'auto', maxHeight: '90vh' }}>
-            <Box sx={{ textAlign: 'center', marginTop: 2 }}>
+          <CustomScrollbarBox sx={{ overflow: 'auto', maxHeight: '90vh', marginTop: 2 }}>
+            <Box sx={{ textAlign: 'center' }}>
               <Button variant="contained" color="secondary" onClick={handleDownloadResume}>
                 Download Resume
               </Button>

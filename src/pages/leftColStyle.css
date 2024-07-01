@@ -1,0 +1,20 @@
+.left-column {
+    height: 100%;
+  }
+  
+  .left-column-item {
+    flex: 1 1 auto;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .left-column-item:last-child {
+    padding-bottom: 0%;
+  }
+  
+  .left-column-item:first-child {
+    padding-top: 0%;
+  }
