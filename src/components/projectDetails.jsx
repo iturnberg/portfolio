@@ -12,11 +12,10 @@ const ProjectDetails = ({ project }) => {
         padding: 2,
         color: '#fff',
         backgroundColor: '#140026',
-        height: '90vh',
-        width: '800px', // Set the width to 800px
-        minWidth: '800px', // Ensure the minimum width is 800px
-        maxWidth: '800px', // Ensure the maximum width is 800px
-        margin: '0 auto', // Center the component horizontally
+        height: 'auto',
+        width: '100%',
+        maxWidth: '800px',
+        margin: '0 auto',
         border: '1px solid #6a1b9a',
       }}
     >
@@ -40,9 +39,7 @@ const ProjectDetails = ({ project }) => {
             rel="noopener noreferrer"
             variant="contained"
             sx={{
-              position: 'relative',
               color: '#c414e7 !important',
-              paddingLeft: '10px',
               backgroundColor: 'black',
               borderRadius: '8px',
               transition: 'background-color 0.3s, border-image 0.3s',
@@ -99,9 +96,7 @@ const ProjectDetails = ({ project }) => {
             rel="noopener noreferrer"
             variant="contained"
             sx={{
-              position: 'relative',
               color: '#c414e7 !important',
-              paddingLeft: '10px',
               backgroundColor: 'black',
               borderRadius: '8px',
               transition: 'background-color 0.3s, border-image 0.3s',

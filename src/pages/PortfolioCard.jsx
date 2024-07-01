@@ -70,9 +70,7 @@ function PortfolioCard({ project }) {
               fullWidth
               onClick={handleDetailsClick}
               sx={{
-                position: 'relative',
                 color: '#c414e7 !important',
-                paddingLeft: '10px',
                 backgroundColor: 'black',
                 borderRadius: '8px',
                 transition: 'background-color 0.3s, border-image 0.3s',
