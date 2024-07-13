@@ -3,7 +3,7 @@ const jobs = [
         title: "Service Assistant",
         company: "Fortu",
         location: "Saint Petersburg",
-        duration: "Nov, 2023 - Present",
+        duration: "Nov, 2023 - July, 2024",
         responsibilities: [
             "Fortu is a high-end Pan Asian steakhouse that provides an elevated dining experience to its guests. As one of the original members of the restaurant, I helped shaped how the Service Assistant team facilitates Fortu’s high level of service throughout our hours of operation, which will usually see around 300 guests."
         ]
@@ -12,7 +12,7 @@ const jobs = [
         title: "Barista",
         company: "Starbucks",
         location: "Saint Petersburg, Florida",
-        duration: "July, 2022 - Present",
+        duration: "July, 2022 - December, 2024",
         responsibilities: [
             "Dedicated and customer-focused Starbucks Barista with a proven track record of delivering exceptional service and crafting high-quality beverages in a fast-paced, team-oriented environment.",
             "Possesses strong communication skills, a deep knowledge of coffee and tea products, and a commitment to meeting customer expectations.",

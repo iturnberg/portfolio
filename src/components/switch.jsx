@@ -22,8 +22,8 @@ const CustomScrollbarBox = styled(Box)({
 
 const handleDownloadResume = () => {
   const link = document.createElement('a');
-  link.href = '/assets/Ian_Turnberg_Resume.docx';
-  link.download = 'Ian_Turnberg_Resume.docx';
+  link.href = '/assets/Ian_Turnberg_Resume.pdf';
+  link.download = 'Ian_Turnberg_Resume.pdf';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
